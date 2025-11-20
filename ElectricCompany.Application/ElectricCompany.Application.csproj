@@ -6,4 +6,17 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="13.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\UserFeatures\Commands\Login\" />
+    <Folder Include="Features\UserFeatures\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ElectricCompany.Domain\ElectricCompany.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

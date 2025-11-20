@@ -11,6 +11,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString);
 });
 
+builder.Services.AddMediatR(mediatr => mediatr.RegisterServicesFromAssembly(typeof(ElectricCompany.Application.AssemblyReference).Assembly));
+
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddControllers().AddApplicationPart(typeof(ElectricCompany.Presentation.AssemblyReference).Assembly);
