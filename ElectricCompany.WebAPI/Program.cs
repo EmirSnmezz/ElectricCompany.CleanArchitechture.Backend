@@ -8,7 +8,7 @@ string connectionString = builder.Configuration.GetConnectionString("NpgsqlConne
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseNpgsql(builder.Configuration.GetConnectionString(connectionString);
+    options.UseNpgsql(connectionString);
 });
 
 builder.Services.AddEndpointsApiExplorer();
