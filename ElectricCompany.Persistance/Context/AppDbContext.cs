@@ -18,12 +18,12 @@ namespace ElectricCompany.Persistance.Context
             {
                 if(entry.State == EntityState.Added)
                 {
-                    entry.Property(p => p.CreatedDate).CurrentValue = DateTime.Now;
+                    entry.Property(p => p.CreatedDate).CurrentValue = DateTime.UtcNow;
                 }
 
                 else if(entry.State == EntityState.Modified)
                 {
-                    entry.Property(p => p.UpdatedDate).CurrentValue = DateTime.Now;
+                    entry.Property(p => p.UpdatedDate).CurrentValue = DateTime.UtcNow;
                 }
             }
 

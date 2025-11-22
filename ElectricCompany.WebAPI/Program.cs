@@ -1,4 +1,6 @@
+using ElectricCompany.Application.Abstraction.Services;
 using ElectricCompany.Persistance.Context;
+using ElectricCompany.Persistance.Services;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 
@@ -10,6 +12,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseNpgsql(connectionString);
 });
+
+builder.Services.AddAutoMapper(typeof(ElectricCompany.Persistance.AssemblyReference).Assembly);
+
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddMediatR(mediatr => mediatr.RegisterServicesFromAssembly(typeof(ElectricCompany.Application.AssemblyReference).Assembly));
 

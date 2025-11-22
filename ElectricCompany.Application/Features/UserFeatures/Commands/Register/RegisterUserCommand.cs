@@ -3,5 +3,5 @@ using MediatR;
 
 namespace ElectricCompany.Application.Features.UserFeatures.Commands.Register
 {
-    public sealed record RegisterUserCommand(string Username, string Email, string Password, string Fullname) : IRequest<MessageResponse>;
+    public sealed record RegisterUserCommand(string Username, string Email, string Password, string Name, string Surname) : IRequest<MessageResponse>;
 }

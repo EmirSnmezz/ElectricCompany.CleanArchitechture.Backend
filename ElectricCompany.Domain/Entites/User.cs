@@ -9,5 +9,6 @@ namespace ElectricCompany.Domain.Entites
         public string Email { get; set; }
         public string PasswordHash { get; set; }
         public List<string> Roles { get; set; }
+        public string Username { get; set; }
     }
 }
