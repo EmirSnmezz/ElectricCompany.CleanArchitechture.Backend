@@ -11,4 +11,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ElectricCompany.Application\ElectricCompany.Application.csproj" />
+    <ProjectReference Include="..\ElectricCompany.Infrastructure\ElectricCompany.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -9,7 +9,10 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="FluentValidation" Version="12.1.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.0" />
     <PackageReference Include="MediatR" Version="13.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -19,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ElectricCompany.Application\ElectricCompany.Application.csproj" />
+    <ProjectReference Include="..\ElectricCompany.Infrastructure\ElectricCompany.Infrastructure.csproj" />
     <ProjectReference Include="..\ElectricCompany.Persistance\ElectricCompany.Persistance.csproj" />
     <ProjectReference Include="..\ElectricCompany.Presentation\ElectricCompany.Presentation.csproj" />
   </ItemGroup>
